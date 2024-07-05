@@ -2,10 +2,6 @@
 #pip install pytest-playwright
 #playwright install
 
-#Create an Exe File
-#pip install pyinstaller
-#create exe command: pyinstaller test_refresh.py --onefile --windowed
-
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
@@ -16,6 +12,6 @@ with sync_playwright() as p:
     
     i = 0
     while i < 10:
-        page.keyboard.press('F5',delay=1000)
+        page.keyboard.press('F5',delay=1000) #1000 = 1 Second
         page.reload()
         i += 1
